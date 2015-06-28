@@ -1,0 +1,30 @@
+{
+  "name": "beyond-earth-technologies",
+  "version": "0.1.0",
+  "description": "Civilization: Beyond Earth Technologies",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/camjm/beyond-earth-technologies.git"
+  },
+  "keywords": [
+    "Civilization",
+    "Beyond",
+    "Earth",
+    "Technologies"
+  ],
+  "author": "Cam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camjm/beyond-earth-technologies/issues"
+  },
+  "homepage": "https://github.com/camjm/beyond-earth-technologies",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-jade": "^0.14.1"
+  }
+}
