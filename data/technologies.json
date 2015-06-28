@@ -1,0 +1,11 @@
+[{
+  "name": "Technology One",
+  "cost": 60
+},
+{
+  "name": "Technology Two",
+  "cost": 90
+},{
+  "name": "Technology Three",
+  "cost": 120
+}]
