@@ -1,3 +1,7 @@
-//
-   Created by Campbgell on 29/06/2015.
+extends shared/layout
 
+block content
+    p #{name}
+    p #{description}
+    each building in buildings
+        include buildings/building

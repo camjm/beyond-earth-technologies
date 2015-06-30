@@ -1,12 +1,18 @@
-[{
-  "name": "Building One",
-  "cost": 40
-},
 {
-  "name": "Building Two",
-  "cost": 50
-},
-{
-  "name": "Building Three",
-  "cost": 80
-}]
+  "name": "Buildings",
+  "description": "Description for buildings",
+  "buildings": [
+    {
+      "name": "Building One",
+      "cost": 40
+    },
+    {
+      "name": "Building Two",
+      "cost": 50
+    },
+    {
+      "name": "Building Three",
+      "cost": 80
+    }
+  ]
+}

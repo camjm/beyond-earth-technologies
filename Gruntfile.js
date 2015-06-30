@@ -4,11 +4,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jade');
 
-    //TODO: correct name of task
-    grunt.registerMultiTask('blah', 'blah blah', function() {
-        //TODO: implement task
-    });
-
     //TODO: jshint task for json data?
 
     //TODO: search for task to generate many jade files from one
@@ -21,24 +16,30 @@ module.exports = function(grunt) {
         clean: {
             src: ['build']
         },
-        blah: {
-            technologies: {
-                data: "data/technologies.json"
-            }
-        },
+        // Compilation
         jade: {
             options: {
-                pretty: true,
-                data: function(dest, src) {
-                    return {
-                        from: src,
-                        to: dest
-                    };
-                }
+                pretty: true
             },
             technologies: {
-                files: {
-                    "build/foo.html": "src/foo.jade"
+                src: "src/views/technologies.jade",
+                dest: "build/technologies.html",
+                options: {
+                    data: require('./src/data/technologies.json')
+                }
+            },
+            buildings: {
+                src: "src/views/buildings.jade",
+                dest: "build/buildings.html",
+                options: {
+                    data: require('./src/data/buildings.json')
+                }
+            },
+            units: {
+                src: "src/views/units.jade",
+                dest: "build/units.html",
+                options: {
+                    data: require('./src/data/units.json')
                 }
             }
         }

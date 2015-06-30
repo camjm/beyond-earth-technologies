@@ -1,12 +1,18 @@
-[{
-  "name": "Technology One",
-  "cost": 60
-},
 {
-  "name": "Technology Two",
-  "cost": 90
-},
-{
-  "name": "Technology Three",
-  "cost": 120
-}]
+  "name": "Technologies",
+  "description": "Description for technologies",
+  "technologies": [
+    {
+      "name": "Technology One",
+      "cost": 60
+    },
+    {
+      "name": "Technology Two",
+      "cost": 90
+    },
+    {
+      "name": "Technology Three",
+      "cost": 120
+    }
+  ]
+}
