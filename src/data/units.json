@@ -1,7 +1,7 @@
 {
   "name": "Units",
   "description": "Description for units",
-  "units": [
+  "rows": [
     {
       "name": "Unit One",
       "cost": 40

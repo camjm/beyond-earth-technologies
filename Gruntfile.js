@@ -1,4 +1,4 @@
-module.exports = function(grunt) {
+module.exports = function (grunt) {
 
     // Load the task plugins
     grunt.loadNpmTasks('grunt-contrib-clean');
@@ -40,6 +40,19 @@ module.exports = function(grunt) {
                 dest: "build/units.html",
                 options: {
                     data: require('./src/data/units.json')
+                }
+            },
+            app: {
+                src: "src/views/app.jade",
+                dest: "build/app.html",
+                options: {
+                    data: {
+                        sections: [
+                            '<%= jade.technologies.options.data %>',
+                            '<%= jade.buildings.options.data %>',
+                            '<%= jade.units.options.data %>'
+                        ]
+                    }
                 }
             }
         }
