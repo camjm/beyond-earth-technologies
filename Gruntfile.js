@@ -1,20 +1,22 @@
 module.exports = function (grunt) {
 
     // Load the task plugins
+    grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-jade');
-
-    //TODO: jshint task for json data?
-
-    //TODO: search for task to generate many jade files from one
-    //http://stackoverflow.com/questions/24559380/creating-multiple-html-files-from-a-single-jade-template-with-grunt
-    //http://stackoverflow.com/questions/17798358/grunt-compiling-jade-files
-    //https://github.com/gruntjs/grunt-contrib-jade
 
     // Project configuration
     grunt.initConfig({
         clean: {
             src: ['build']
+        },
+        jshint: {
+            options: {
+                curly: true,
+                eqeqeq: true
+            },
+            all: ['Gruntfile.js', 'src/**/*.{js,json}', 'test/**/*.js'],
+            json: "src/data/*.json"
         },
         // Compilation
         jade: {
@@ -59,5 +61,5 @@ module.exports = function (grunt) {
     });
 
     // Define the default task
-    grunt.registerTask('default', ['clean', 'jade']);
+    grunt.registerTask('default', ['clean', 'jshint:all', 'jade']);
 };
